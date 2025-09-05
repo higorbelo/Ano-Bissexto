@@ -1,0 +1,23 @@
+#include <iostream>
+
+//procedimento que verifiva se o ano é bissexto
+void bissexto( int ano ){
+    int A = ano % 400;
+    int B = ano % 4 == 0;
+    int C = ano % 100 == 0;
+
+     if( (A == 0) || ((B == 0) && (C != 0)) ) {
+         printf(" \nO ano %d e bissexto", ano);
+     }else {
+         printf(" \nO ano %d nao é bissexto", ano);
+     }
+}
+int main(){
+    int ano = 0;
+    printf("\n digite um ano");
+    scanf("%d", &ano);
+
+    bissexto ( ano );
+    
+    return 0;
+}
